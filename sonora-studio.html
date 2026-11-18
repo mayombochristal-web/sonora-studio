@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b6b4b">
+  <meta name="description" content="Sonora Studio — sonneries personnalisées, tags audio, nettoyage, pré-mixage, mastering et refrains TikTok au Gabon. Commande sur WhatsApp.">
+  <meta property="og:title" content="Sonora Studio — Ton son, ta signature.">
+  <meta property="og:description" content="Des services audio rapides et accessibles au Gabon. Commande directement sur WhatsApp.">
+  <meta property="og:type" content="website">
+  <title>Sonora Studio — Ton son, ta signature.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--green:#0b6b4b;--green2:#084c38;--gold:#e4b548;--ink:#101512;--paper:#f5f4ef;--white:#fff;--muted:#68716b;--line:#e4e6df;--red:#20b96b;--shadow:0 18px 55px rgba(8,30,20,.10);--head:"Space Grotesk",sans-serif;--body:"DM Sans",sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--body)}
+    a{color:inherit}
+    button,input{font:inherit}
+    img{max-width:100%}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--green);font-weight:700;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase}
+    .eyebrow:before{content:"";width:25px;height:2px;background:var(--gold)}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,h3{font-family:var(--head);line-height:1.08;letter-spacing:-.035em}
+    h1{font-size:clamp(3rem,7vw,6.2rem);max-width:760px;margin:22px 0}
+    h2{font-size:clamp(2.15rem,4.5vw,3.65rem);margin:15px 0}
+    h3{font-size:1.28rem}
+    .section{padding:100px 0}
+    .section-head{max-width:700px;margin-bottom:42px}
+    .section-head p{color:var(--muted);font-size:1.05rem;max-width:600px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;padding:15px 23px;text-decoration:none;font-weight:700;cursor:pointer;transition:.2s transform,.2s box-shadow,.2s background}
+    .btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0002}
+    .btn-gold{background:var(--gold);color:#17140d}
+    .btn-green{background:var(--green);color:#fff}
+    .btn-outline{border:1px solid #ffffff75;color:#fff;background:transparent}
+    .btn svg{width:19px;height:19px;flex:none}
+    .topline{background:#071b13;color:#d9e4dc;font-size:.82rem;padding:8px 0}
+    .topline .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    header{position:sticky;top:0;z-index:30;background:#0b6b4bf2;color:white;backdrop-filter:blur(14px);border-bottom:1px solid #ffffff18}
+    .navrow{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .brand{text-decoration:none;display:flex;align-items:center;gap:11px;line-height:1}
+    .brand-mark{width:42px;height:42px;border-radius:13px;background:var(--gold);display:grid;place-items:center;color:#101512;font-size:1.3rem}
+    .brand strong{font:700 1.08rem var(--head);letter-spacing:.06em}
+    .brand small{display:block;font-size:.68rem;opacity:.78;margin-top:6px;letter-spacing:.06em}
+    nav ul{display:flex;align-items:center;gap:25px;list-style:none;padding:0;margin:0}
+    nav a{text-decoration:none;color:#f2f7f3;font-size:.91rem;font-weight:600;opacity:.9}
+    nav a:hover{color:var(--gold);opacity:1}
+    .nav-cta{padding:11px 17px;font-size:.86rem}
+    .menu-btn{display:none;border:1px solid #ffffff70;background:transparent;color:white;border-radius:10px;padding:9px 12px;font-size:1.2rem}
+    .hero{background:radial-gradient(circle at 83% 38%,#167e5a 0,transparent 30%),linear-gradient(130deg,#0b6b4b,#073e2e 80%);color:white;position:relative;overflow:hidden;padding:100px 0 105px}
+    .hero:after{content:"";position:absolute;width:620px;height:620px;border:1px solid #ffffff12;border-radius:50%;right:-210px;top:-170px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff05;pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px;position:relative;z-index:1}
+    .hero .eyebrow{color:#f5d98f}
+    .hero h1 span{color:var(--gold)}
+    .hero-copy{max-width:620px;color:#e2eee7;font-size:1.14rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin:32px 0 24px}
+    .proofline{display:flex;gap:20px;flex-wrap:wrap;color:#d6e8dc;font-size:.88rem}
+    .proofline span{display:flex;align-items:center;gap:8px}
+    .proofline b{color:var(--gold)}
+    .visual{min-height:390px;display:grid;place-items:center;position:relative}
+    .disc{width:min(360px,75vw);aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#101512 0 3px,#242d28 4px 5px,#101512 6px 9px);box-shadow:0 35px 65px #00170f88;display:grid;place-items:center;position:relative;animation:spin 18s linear infinite}
+    .disc:before{content:"";position:absolute;inset:15%;border:1px solid #ffffff15;border-radius:50%}
+    .disc-label{width:36%;aspect-ratio:1;border-radius:50%;background:var(--gold);display:grid;place-items:center;color:#13251a;text-align:center;font:700 clamp(.8rem,2vw,1.15rem) var(--head);box-shadow:0 0 0 7px #101512}
+    .disc-label small{display:block;font:600 .55rem var(--body);letter-spacing:.2em}
+    .sound-bars{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;height:42px}
+    .sound-bars i{width:5px;border-radius:9px;background:var(--gold);height:var(--h);opacity:.9}
+    .floating-note{position:absolute;right:0;top:42px;background:#fff;color:var(--ink);padding:14px 17px;border-radius:14px;box-shadow:var(--shadow);font-size:.85rem;font-weight:700;transform:rotate(4deg)}
+    .floating-note b{color:var(--green)}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .trust{background:white;border-bottom:1px solid var(--line)}
+    .trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:22px 0}
+    .trust-item{display:flex;align-items:center;justify-content:center;gap:12px;color:#3d4942;font-size:.9rem;font-weight:600;text-align:center}
+    .trust-item strong{font-family:var(--head);font-size:1.1rem;color:var(--green)}
+    .iconbox{width:42px;height:42px;border-radius:13px;background:#e9f3ed;display:grid;place-items:center;font-size:1.2rem}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid var(--line);border-radius:20px;padding:27px;box-shadow:0 5px 20px #17251b06;display:flex;flex-direction:column;min-height:250px;transition:.22s}
+    .card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+    .card-icon{width:48px;height:48px;border-radius:15px;background:#eaf3ed;color:var(--green);display:grid;place-items:center;font-size:1.35rem;margin-bottom:22px}
+    .card p{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+    .price{font:700 1.8rem var(--head);color:var(--green);margin:4px 0 12px}
+    .price small{font:500 .82rem var(--body);color:var(--muted)}
+    .meta{color:var(--muted);font-size:.84rem;margin-bottom:20px}
+    .card .btn{margin-top:auto;width:100%}
+    .ribbon{display:inline-block;background:#fff1c9;color:#75500b;padding:5px 10px;border-radius:999px;font-size:.72rem;font-weight:800;margin-bottom:13px;align-self:flex-start}
+    .alt{background:#eaf0e9}
+    .pack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+    .pack{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;display:flex;flex-direction:column}
+    .pack h3{margin-bottom:10px}
+    .pack .price{font-size:1.65rem}
+    .pack ul,.sub-card ul{padding-left:19px;color:var(--muted);font-size:.9rem;margin:8px 0 24px}
+    .pack li,.sub-card li{margin:7px 0}
+    .saving{font-size:.8rem;color:var(--green);font-weight:800;margin-bottom:15px}
+    .sub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .sub-card{background:white;border:1px solid var(--line);border-radius:20px;padding:28px;position:relative;display:flex;flex-direction:column}
+    .sub-card.featured{border:2px solid var(--gold);box-shadow:var(--shadow);transform:translateY(-8px)}
+    .sub-card .btn{margin-top:auto}
+    .popular{position:absolute;top:-14px;right:20px;background:var(--gold);color:#251c08;padding:6px 13px;border-radius:99px;font-size:.75rem;font-weight:800}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+    .step{background:white;border:1px solid var(--line);border-radius:18px;padding:24px;counter-increment:step}
+    .step:before{content:"0" counter(step);font:700 2rem var(--head);color:var(--gold);display:block;margin-bottom:24px}
+    .step p{color:var(--muted);font-size:.92rem;margin-bottom:0}
+    .quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .quote{background:white;border:1px solid var(--line);border-radius:18px;padding:25px}
+    .quote p{font-size:1rem;color:#364139}
+    .person{display:flex;align-items:center;gap:11px;margin-top:22px;font-size:.85rem}
+    .person b{width:39px;height:39px;border-radius:50%;background:var(--green);color:white;display:grid;place-items:center}
+    .person small{display:block;color:var(--muted)}
+    .quote-note{font-size:.78rem;color:var(--muted);margin-top:16px}
+    .calculator{background:#101b15;color:white;border-radius:24px;padding:clamp(24px,5vw,48px);display:grid;grid-template-columns:1fr .75fr;gap:40px;align-items:start}
+    .calculator h2{font-size:clamp(2rem,4vw,3rem)}
+    .calculator .eyebrow{color:var(--gold)}
+    .calculator p{color:#b8c8bd}
+    .calc-list{display:grid;gap:0}
+    .calc-row{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:13px 0;border-bottom:1px solid #ffffff20;font-size:.91rem}
+    .calc-row label{display:flex;align-items:center;gap:10px;cursor:pointer}
+    .calc-row input{width:18px;height:18px;accent-color:var(--gold)}
+    .calc-total{background:#1b2a20;border:1px solid #ffffff20;border-radius:16px;padding:22px;position:sticky;top:105px}
+    .calc-total small{color:#b8c8bd}
+    .total{font:700 2rem var(--head);color:var(--gold);margin:8px 0 17px}
+    .calc-total .btn{width:100%}
+    .promo-row{padding:16px 0}
+    .faq-list{max-width:850px}
+    details{background:white;border:1px solid var(--line);border-radius:14px;margin:10px 0}
+    summary{padding:19px 22px;cursor:pointer;list-style:none;font-weight:700;display:flex;justify-content:space-between;gap:20px}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
+    details[open] summary:after{content:"−"}
+    details p{padding:0 22px 20px;margin:0;color:var(--muted)}
+    .contact{background:linear-gradient(135deg,#0b6b4b,#073d2d);color:white;text-align:center;position:relative;overflow:hidden}
+    .contact h2{max-width:780px;margin:18px auto}
+    .contact p{color:#d6e8dc;max-width:620px;margin:0 auto 28px}
+    .contact .eyebrow{color:var(--gold)}
+    .contact-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}
+    .contact-number{font:700 clamp(1.7rem,4vw,2.6rem) var(--head);margin:25px 0 5px}
+    .socials{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:30px}
+    .socials a{color:#e8f2eb;text-decoration:none;font-weight:600;font-size:.9rem}
+    .socials a:hover{color:var(--gold)}
+    footer{background:#071b13;color:#c8d6cd;padding:28px 0;font-size:.82rem}
+    .footrow{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+    .legal{max-width:850px;margin:20px auto 0;border-top:1px solid #ffffff20;padding-top:16px}
+    .legal summary{background:transparent;color:#e6eee8;padding:10px 0}
+    .legal p,.legal li{color:#b8c8bd;font-size:.83rem}
+    .legal a{color:var(--gold)}
+    .float-wa{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#1fbd68;color:#fff;display:grid;place-items:center;z-index:40;box-shadow:0 10px 28px #0004;text-decoration:none;font-size:1.65rem}
+    .mobile-actions{display:none}
+    :focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+    @media(max-width:1000px){nav ul{gap:14px}nav a{font-size:.82rem}.nav-cta{display:none}.cards{grid-template-columns:repeat(2,1fr)}.pack-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:760px){
+      .topline{display:none}.navrow{height:68px}.menu-btn{display:block}
+      nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--green2);padding:10px 22px 22px}
+      nav.open{display:block}nav ul{display:grid;gap:0}nav a{display:block;padding:13px 0;border-bottom:1px solid #ffffff20;font-size:.95rem}
+      .hero{padding:72px 0 65px}.hero-grid{grid-template-columns:1fr;gap:25px}.visual{min-height:300px}.disc{width:260px}.floating-note{right:4%;top:8px}
+      .section{padding:72px 0}.trust-grid{grid-template-columns:1fr;gap:14px}.trust-item{justify-content:flex-start;text-align:left}
+      .cards,.sub-grid,.quote-grid{grid-template-columns:1fr}.pack-grid{grid-template-columns:1fr 1fr}.sub-card.featured{transform:none}
+      .calculator{grid-template-columns:1fr;gap:20px}.calc-total{position:static}
+      .mobile-actions{display:flex;position:fixed;bottom:0;left:0;right:0;padding:9px;background:#fff;border-top:1px solid var(--line);z-index:35;gap:8px;padding-bottom:calc(9px + env(safe-area-inset-bottom))}
+      .mobile-actions a{flex:1;text-align:center;padding:12px 8px;border-radius:10px;text-decoration:none;font-weight:800;font-size:.9rem}
+      .mobile-call{background:#101512;color:white}.mobile-order{background:#1fbd68;color:white}
+      .float-wa{bottom:85px;width:52px;height:52px;right:14px}
+      body{padding-bottom:68px}
+    }
+    @media(max-width:430px){.wrap{width:min(100% - 30px,1160px)}.pack-grid,.process-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.proofline{display:grid;gap:9px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="wrap"><span>Micro-services audio · Gabon</span><span>Commandes WhatsApp · Paiement Airtel Money</span></div></div>
+  <header>
+    <div class="wrap navrow">
+      <a class="brand" href="#accueil" aria-label="Sonora Studio, accueil">
+        <span class="brand-mark">♫</span><span><strong>SONORA STUDIO</strong><small>TON SON, TA SIGNATURE.</small></span>
+      </a>
+      <nav id="nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#services">Services</a></li><li><a href="#packs">Packs</a></li><li><a href="#abonnements">Abonnements</a></li><li><a href="#process">Process</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-gold nav-cta" href="https://wa.me/24177765496" data-wa="un service audio">Commander ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">☰</button>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Le son qui te ressemble</span>
+          <h1>Ton son.<br><span>Ta signature.</span><br>Prêt à diffuser.</h1>
+          <p class="hero-copy">Des micro-services audio rapides et accessibles : sonneries personnalisées, tags, nettoyage vocal, pré-mixage, mastering et refrains pour TikTok.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#services">Découvrir les services <span>→</span></a>
+            <a class="btn btn-outline" href="https://wa.me/24177765496" data-wa="une demande de renseignement">Discuter sur WhatsApp</a>
+          </div>
+          <div class="proofline"><span><b>✓</b> Commande simple sur WhatsApp</span><span><b>✓</b> Paiement Airtel Money</span><span><b>✓</b> Tarifs en FCFA</span></div>
+        </div>
+        <div class="visual" aria-label="Illustration d'un disque vinyle et d'une onde sonore">
+          <div class="disc"><div class="disc-label">SONORA<small>STUDIO · GABON</small></div></div>
+          <div class="sound-bars" aria-hidden="true"><i style="--h:12px"></i><i style="--h:23px"></i><i style="--h:36px"></i><i style="--h:19px"></i><i style="--h:29px"></i><i style="--h:40px"></i><i style="--h:17px"></i><i style="--h:31px"></i><i style="--h:13px"></i><i style="--h:25px"></i><i style="--h:37px"></i><i style="--h:18px"></i><i style="--h:30px"></i><i style="--h:14px"></i></div>
+          <div class="floating-note">AUDIO DESIGN<br><b>Made in Gabon</b></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust"><div class="wrap trust-grid">
+      <div class="trust-item"><span class="iconbox">⚡</span><span><strong>5 à 30 min</strong><br>sur plusieurs services</span></div>
+      <div class="trust-item"><span class="iconbox">🎧</span><span><strong>Un son soigné</strong><br>adapté à ton projet</span></div>
+      <div class="trust-item"><span class="iconbox">📲</span><span><strong>Commande directe</strong><br>sur WhatsApp</span></div>
+    </div></div>
+
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Le catalogue</span><h2>Les services audio</h2><p>Choisis le service adapté à ton besoin. Tu peux préciser ton idée, transmettre ton fichier et confirmer les détails directement avec le studio.</p></div>
+        <div class="cards" id="serviceCards"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="packs">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Pour aller plus loin</span><h2>Les packs avantageux</h2><p>Regroupe plusieurs prestations et profite d'un tarif global plus intéressant.</p></div>
+        <div class="pack-grid" id="packCards"></div>
+      </div>
+    </section>
+
+    <section class="section" id="abonnements">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Pour les créateurs réguliers</span><h2>Les formules mensuelles</h2><p>Un accompagnement récurrent pour produire du contenu et faire évoluer ton identité sonore. Formules sans engagement, selon les conditions convenues avec le studio.</p></div>
+        <div class="sub-grid" id="subscriptionCards"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="process">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Simple et direct</span><h2>Comment ça marche ?</h2><p>Pas de parcours compliqué : la commande et les échanges se font directement avec Sonora Studio.</p></div>
+        <div class="process-grid">
+          <article class="step"><h3>Choisis ton service</h3><p>Parcours les prestations ou compose ton devis avec le calculateur.</p></article>
+          <article class="step"><h3>Écris sur WhatsApp</h3><p>Explique ton besoin et transmets les fichiers nécessaires dans la conversation.</p></article>
+          <article class="step"><h3>Confirme et règle</h3><p>Valide le prix et le délai avec le studio, puis règle par Airtel Money.</p></article>
+          <article class="step"><h3>Reçois ton audio</h3><p>Le studio traite ta demande et te livre le résultat convenu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="avis">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Retours partagés</span><h2>Ils parlent de leur expérience</h2><p>Quelques retours clients présents dans les éléments transmis pour le site.</p></div>
+        <div class="quote-grid">
+          <article class="quote"><p>« Ma sonnerie sonnait vraiment comme ce que j'avais en tête, et je l'ai reçue le jour même. »</p><div class="person"><b>MR</b><span><strong>Marielle R.</strong><small>Sonnerie personnalisée</small></span></div></article>
+          <article class="quote"><p>« Le nettoyage audio a transformé mes enregistrements de téléphone. Mes vidéos sonnent enfin pro. »</p><div class="person"><b>JD</b><span><strong>Junior D.</strong><small>Créateur de contenu</small></span></div></article>
+          <article class="quote"><p>« Livraison rapide, prix imbattable, et le tag audio colle exactement à l'ambiance de mes prods. »</p><div class="person"><b>SN</b><span><strong>Sarah N.</strong><small>Podcasteuse</small></span></div></article>
+        </div>
+        <p class="quote-note">À publier uniquement avec l'accord des personnes concernées.</p>
+      </div>
+    </section>
+
+    <section class="section" id="devis">
+      <div class="wrap">
+        <div class="calculator">
+          <div>
+            <span class="eyebrow">Estimation rapide</span>
+            <h2>Compose ton devis.</h2>
+            <p>Sélectionne les prestations souhaitées. Le total indicatif est calculé automatiquement et peut être envoyé sur WhatsApp pour confirmation.</p>
+            <div class="calc-list" id="calculatorList"></div>
+            <div class="promo-row"><label class="calc-row"><span><input type="checkbox" id="promoCheck"> J'ai le code SONORA (première commande)</span><strong>−10 %</strong></label></div>
+          </div>
+          <aside class="calc-total">
+            <small>ESTIMATION DE TON PANIER</small>
+            <div class="total" id="totalPrice" aria-live="polite">0 FCFA</div>
+            <small id="discountText">Sélectionne au moins un service.</small>
+            <div style="height:18px"></div>
+            <a class="btn btn-gold" id="quoteButton" href="https://wa.me/24177765496">Envoyer mon devis ↗</a>
+            <p style="font-size:.76rem;margin:14px 0 0">Prix indicatif. Le montant et le délai définitifs sont confirmés sur WhatsApp avant paiement.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="faq">
+      <div class="wrap">
+        <div class="section-head"><span class="eyebrow">Questions fréquentes</span><h2>Avant de commander</h2><p>Les informations essentielles pour préparer ta commande.</p></div>
+        <div class="faq-list">
+          <details open><summary>Comment envoyer ma commande ?</summary><p>Tout se passe sur WhatsApp au 077 765 496 : précise le service, envoie ton fichier ou ton message, puis confirme les modalités de paiement par Airtel Money.</p></details>
+          <details><summary>Dans quel format dois-je envoyer mon audio ?</summary><p>WAV ou MP3, 44,1 kHz minimum. Pour le mastering : WAV 24 bits, idéalement un mix non compressé.</p></details>
+          <details><summary>Combien de temps pour recevoir ma commande ?</summary><p>De 5 à 30 minutes selon le service. Le refrain TikTok est annoncé sous 24 à 48 h.</p></details>
+          <details><summary>Quand dois-je payer ?</summary><p>Le paiement est prévu avant la livraison afin de lancer le traitement. Confirme toujours le montant et les coordonnées de paiement dans la conversation officielle.</p></details>
+          <details><summary>Puis-je arrêter une formule mensuelle ?</summary><p>Oui, les formules mensuelles sont annoncées sans engagement. Les prestations incluses et leur période d'utilisation sont à confirmer avec le studio.</p></details>
+          <details><summary>Mes fichiers audio sont-ils conservés ?</summary><p>La politique annoncée par le studio est de ne pas conserver les fichiers clients après livraison. Évite toutefois d'envoyer des contenus confidentiels qui ne sont pas nécessaires à la prestation.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <span class="eyebrow">On donne vie à ton idée ?</span>
+        <h2>Prêt à faire entendre ta différence ?</h2>
+        <p>Explique ton projet à Sonora Studio. Tu recevras les informations utiles pour confirmer le service, le tarif et le délai.</p>
+        <div class="contact-actions">
+          <a class="btn btn-gold" href="https://wa.me/24177765496" data-wa="une demande de devis">Commander sur WhatsApp ↗</a>
+          <a class="btn btn-outline" href="tel:+24177765496">Appeler le studio</a>
+        </div>
+        <div class="contact-number">077 765 496</div>
+        <div>Airtel Money · WhatsApp · Gabon</div>
+        <div class="socials">
+          <a href="https://www.tiktok.com/@baguebe" target="_blank" rel="noopener noreferrer">TikTok @baguebe ↗</a>
+          <a href="https://open.spotify.com/user/31ioe5afokmcxqmmz7fn7wcctehe" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+          <a href="https://www.patreon.com/c/bag979" target="_blank" rel="noopener noreferrer">Patreon ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footrow"><span>© <span id="year"></span> SONORA STUDIO · GEB · Gabon</span><span>Ton son, ta signature.</span></div>
+      <details class="legal">
+        <summary>Mentions légales, conditions de vente et confidentialité</summary>
+        <p><strong>Éditeur :</strong> Sonora Studio, activité de services audio au Gabon. Responsable de publication : GEB (Sabrege GEB). Contact : 077 765 496 (+241 77 765 496).</p>
+        <p><strong>Commandes et paiement :</strong> commandes par WhatsApp. Paiement par Airtel Money avant livraison, après confirmation du montant et du délai.</p>
+        <p><strong>Prestations :</strong> sonneries, tags, nettoyage, pré-mixage, mastering et refrains TikTok. Les délais annoncés sont indicatifs et dépendent de la demande et des fichiers reçus.</p>
+        <p><strong>Droits :</strong> le client déclare disposer des autorisations nécessaires sur les voix, textes, musiques et fichiers transmis. Les droits sur les éléments fournis par le client restent ceux de leurs titulaires respectifs.</p>
+        <p><strong>Confidentialité :</strong> les informations transmises servent au traitement des commandes et aux échanges avec le client. Le studio indique ne pas conserver les fichiers audio après livraison. Pour toute demande relative aux données, contacte le studio sur WhatsApp.</p>
+        <p><strong>Droit d'auteur au Gabon :</strong> informations de référence communiquées dans le document source, notamment l'<a href="https://journal-officiel.ga/20866-0011-pr-2024-/" target="_blank" rel="noopener noreferrer">ordonnance n° 0011/PR/2024</a>. Les présentes mentions sont à faire vérifier avant mise en ligne définitive par un professionnel compétent.</p>
+      </details>
+    </div>
+  </footer>
+
+  <a class="float-wa" href="https://wa.me/24177765496" data-wa="un service audio" aria-label="Commander sur WhatsApp">✆</a>
+  <div class="mobile-actions"><a class="mobile-call" href="tel:+24177765496">Appeler</a><a class="mobile-order" href="https://wa.me/24177765496" data-wa="un service audio">Commander WhatsApp</a></div>
+
+  <script>
+    "use strict";
+    const PHONE = "24177765496";
+    const SERVICES = [
+      {name:"Sonnerie personnalisée",price:500,description:"Une sonnerie unique composée sur mesure à partir de ton texte et de ton univers musical.",delay:"15 à 30 min",icon:"♫"},
+      {name:"Tag audio",price:2500,description:"Ta signature vocale de marque, en intro ou en outro de tes vidéos et productions.",delay:"5 à 10 min",icon:"🎙"},
+      {name:"Nettoyage audio",price:2500,description:"Réduction des bruits gênants et harmonisation du volume pour rendre ton enregistrement plus propre.",delay:"5 à 10 min",icon:"✦"},
+      {name:"Pré-mixage vocal",price:5000,description:"Travail de tonalité, compression et clarté : une voix mieux préparée à poser sur ton beat.",delay:"10 à 20 min",icon:"🎚"},
+      {name:"Mastering",price:8000,description:"Ajustement final du volume et de la clarté pour un rendu cohérent sur les plateformes et les réseaux.",delay:"20 à 30 min",icon:"◉"},
+      {name:"Refrain TikTok",price:10000,description:"Composition, enregistrement et mix d'un hook de 15 à 30 secondes sur beat libre de droits.",delay:"24 à 48 h",icon:"♪",tag:"Nouveau"}
+    ];
+    const PACKS = [
+      {name:"Pack Créateur",price:10000,items:["5 tags audio"],saving:2500},
+      {name:"Pack Podcasteur",price:10000,items:["5 nettoyages audio"],saving:2500},
+      {name:"Pack Artiste",price:12000,items:["3 pré-mixages vocaux"],saving:3000},
+      {name:"Pack Artiste Pro",price:15000,items:["1 sonnerie","1 tag audio","1 nettoyage audio","1 pré-mixage vocal","1 mastering"],saving:3500}
+    ];
+    const SUBSCRIPTIONS = [
+      {name:"Essentiel",price:15000,items:["8 tags ou nettoyages au choix","Livraison selon le service"]},
+      {name:"Créateur+",price:30000,items:["5 pré-mixages vocaux","2 masterings","5 tags audio","Livraison prioritaire"],featured:true},
+      {name:"Studio",price:50000,items:["10 pré-mixages vocaux","5 masterings","Tags et nettoyages illimités","Contact direct prioritaire"]}
+    ];
+    const money = n => new Intl.NumberFormat("fr-FR").format(n) + " FCFA";
+    const wa = message => `https://wa.me/${PHONE}?text=${encodeURIComponent("Bonjour Sonora Studio, je souhaite commander : " + message)}`;
+    document.querySelectorAll("[data-wa]").forEach(a => a.href = wa(a.dataset.wa));
+
+    document.getElementById("serviceCards").innerHTML = SERVICES.map(s => `
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">${s.icon}</div>
+        ${s.tag ? `<span class="ribbon">${s.tag}</span>` : ""}
+        <h3>${s.name}</h3><div class="price">${money(s.price)}</div>
+        <p>${s.description}</p><div class="meta">Délai indicatif : ${s.delay}</div>
+        <a class="btn btn-green" href="${wa(s.name)}">Commander ce service ↗</a>
+      </article>`).join("");
+
+    document.getElementById("packCards").innerHTML = PACKS.map(p => `
+      <article class="pack"><span class="ribbon">Pack avantageux</span><h3>${p.name}</h3>
+        <div class="price">${money(p.price)}</div><div class="saving">Économie annoncée : ${money(p.saving)}</div>
+        <ul>${p.items.map(x=>`<li>${x}</li>`).join("")}</ul>
+        <a class="btn btn-green" href="${wa(p.name)}">Choisir ce pack ↗</a>
+      </article>`).join("");
+
+    document.getElementById("subscriptionCards").innerHTML = SUBSCRIPTIONS.map(s => `
+      <article class="sub-card ${s.featured ? "featured" : ""}">${s.featured ? '<span class="popular">Le plus choisi</span>' : ""}
+        <h3>${s.name}</h3><div class="price">${money(s.price)} <small>/ mois</small></div>
+        <ul>${s.items.map(x=>`<li>${x}</li>`).join("")}</ul>
+        <a class="btn btn-green" href="${wa("abonnement " + s.name)}">Demander cette formule ↗</a>
+      </article>`).join("");
+
+    const calcList = document.getElementById("calculatorList");
+    calcList.innerHTML = SERVICES.map((s,i) => `
+      <div class="calc-row"><label><input type="checkbox" value="${i}"><span>${s.name}</span></label><strong>${money(s.price)}</strong></div>
+    `).join("");
+    const promo = document.getElementById("promoCheck");
+    const totalEl = document.getElementById("totalPrice");
+    const discountEl = document.getElementById("discountText");
+    const quoteButton = document.getElementById("quoteButton");
+    function updateQuote(){
+      const selected = [...calcList.querySelectorAll('input[type="checkbox"]:checked')].map(x => SERVICES[Number(x.value)]);
+      const subtotal = selected.reduce((sum,s)=>sum+s.price,0);
+      const discount = promo.checked && subtotal ? Math.round(subtotal*.10) : 0;
+      const total = subtotal-discount;
+      totalEl.textContent = money(total);
+      discountEl.textContent = selected.length ? (discount ? `Réduction SONORA : −${money(discount)} · Sous-total : ${money(subtotal)}` : `Sous-total : ${money(subtotal)} · Code SONORA disponible sur la première commande`) : "Sélectionne au moins un service.";
+      const message = selected.length ? `devis : ${selected.map(s=>s.name).join(", ")}. Total indicatif : ${money(total)}${discount ? " avec code SONORA" : ""}. Merci de confirmer le tarif et le délai.` : "une demande de renseignement sur vos services audio";
+      quoteButton.href = wa(message);
+    }
+    calcList.addEventListener("change",updateQuote);
+    promo.addEventListener("change",updateQuote);
+    updateQuote();
+
+    const menuBtn = document.getElementById("menuBtn");
+    const nav = document.getElementById("nav");
+    menuBtn.addEventListener("click",()=>{
+      const opened = nav.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded",String(opened));
+      menuBtn.setAttribute("aria-label",opened ? "Fermer le menu" : "Ouvrir le menu");
+      menuBtn.textContent = opened ? "×" : "☰";
+    });
+    nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+      nav.classList.remove("open");menuBtn.setAttribute("aria-expanded","false");menuBtn.textContent="☰";
+    }));
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
